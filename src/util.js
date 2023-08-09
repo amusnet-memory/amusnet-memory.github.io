@@ -43,7 +43,7 @@ export function dom(type, attributes, ...content) {
 }
 
 export function img(src, attributes) {
-    return dom('img', { ...attributes, src: '/assets/' + src });
+    return dom('img', { ...attributes, src: './assets/' + src });
 }
 
 export function card(symbol) {
