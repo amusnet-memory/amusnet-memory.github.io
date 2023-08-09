@@ -1,0 +1,221 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    position: relative;
+    min-height: 100vh;
+}
+
+.splash {
+    background-image: url('./assets/Employer_Branding_Quiz.png');
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.start-app {
+    font-size: 5vh;
+    padding: 1vw 5vw;
+    margin: 40vh 40vw;
+}
+
+main {
+    background-image: url('./assets/Employer_Branding_Page.png');
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-grid {
+    margin: auto;
+    margin-top: 22vh;
+    /* margin: 25vh 10vh 0 10vh; */
+    display: grid;
+    grid-template-columns: repeat(5, 18vh);
+    grid-template-rows: repeat(4, 17vh);
+    gap: 2vh;
+}
+
+.card {
+    border: none;
+    border-radius: 1vh;
+    font-size: 2.5vh;
+    color: white;
+
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+}
+
+.card .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card .content:hover,
+.card .front:hover {
+    /* transform: rotateY(180deg); */
+}
+
+.card .front,
+.card .back {
+    border: none;
+    border-radius: 1vh;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.card .front {
+    background-color: #07162b;
+    box-shadow: 6px 6px 0 0 #b1e3dd;
+}
+
+.card .back {
+    background-color: #07162b;
+    color: white;
+    transform: rotateY(180deg);
+    box-shadow: 6px 6px 0 0 #b1e3dd;
+    overflow: hidden;
+}
+
+@keyframes eliminate {
+    0% {
+        transform: scale(1);
+        /* opacity: 1; */
+    }
+
+    100% {
+        transform: scale(2) translateY(-4vh);
+        /* opacity: 0; */
+    }
+}
+
+@keyframes splash {
+    0% {
+        transform: scale(0);
+        /* opacity: 1; */
+    }
+
+    100% {
+        transform: scale(1);
+        /* opacity: 0; */
+    }
+}
+
+@keyframes unsplash {
+    0% {
+        transform: scale(1);
+        /* opacity: 1; */
+    }
+
+    100% {
+        transform: scale(0);
+        /* opacity: 0; */
+    }
+}
+
+.eliminated {
+    animation-name: eliminate;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.unslpashed {
+    animation-name: unsplash;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.end-screen {
+    position: absolute;
+    text-align: center;
+
+    animation-name: splash;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    
+    margin-top: 10vh;
+}
+
+.end-match {
+    height: 34vh;
+    width: 36vh;
+    margin: 5vh auto;
+}
+
+.end-card {
+    border-radius: 1vh;
+    font-size: 2.5vh;
+    color: white;
+
+    background-color: #07162b;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 6px 6px 0 0 #b1e3dd;
+
+    overflow: hidden;
+}
+
+.end-screen > button {
+    margin-top: 10vh;
+}
+
+.results {
+    font-size: 6vh;
+    font-weight: 600;
+}
+
+.card-symbol {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.prize {
+    background-color: #07162b;
+    width: 80vh;
+    height: 17vh;
+    border-radius: 1vh;
+    margin: auto;
+    margin-top: 5vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 6px 6px 0 0 #b1e3dd;
+
+    color: white;
+    font-size: 4vh;
+    font-weight: 600;
+}
