@@ -30,17 +30,19 @@ export class Summary {
                 card(this._symbol)
             )
         );
-        const restartBtn = dom('button', { className: 'results', onClick: this._onRestart }, 'Restart game');
+        const restartBtn = dom('button', { onClick: () => {
+            if (confirm('Are you sure you want to restart the game?')) {
+                this._onRestart();
+            }
+        }, style: { display: 'none' } }, 'Restart game');
 
         this._view = dom('section', { className: 'end-screen' },
+            restartBtn,
             match,
             dom('div', { className: 'results' }, 'Your prize:'),
-            dom('div', { className: 'prize' }, this._prize)
+            dom('div', { className: 'prize' }, this._prize),
         );
 
-        this._view.addEventListener('contextmenu', (e) => {
-            e.preventDefault();
-            match.replaceWith(restartBtn);
-        });
+        setTimeout(() => restartBtn.style.display = '', 3000);
     }
 }

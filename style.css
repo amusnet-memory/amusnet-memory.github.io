@@ -1,3 +1,7 @@
+* {
+    user-select: none;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -158,7 +162,7 @@ main {
     animation-name: splash;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
-    
+
     margin-top: 10vh;
 }
 
@@ -186,8 +190,12 @@ main {
     overflow: hidden;
 }
 
-.end-screen > button {
-    margin-top: 10vh;
+.end-screen>button {
+    position: absolute;
+    top: -13vh;
+    font-size: 6vh;
+    font-weight: 600;
+    left: 21vh;
 }
 
 .results {
