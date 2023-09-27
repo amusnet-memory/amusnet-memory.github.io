@@ -5,6 +5,7 @@ export class Game {
     static FIRST_MATCH = 'first_match';
     static CLEAR_BOARD = 'clear_board';
     static COMPLETED = 'completed';
+    static MAX_ATTEMPTS = 7;
 
     _view = null;
     /**
@@ -75,7 +76,7 @@ export class Game {
             this._openedCards = 0;
             this._attempts++;
 
-            if (this._mode == Game.FIRST_MATCH && this._attempts == 10) {
+            if (this._mode == Game.FIRST_MATCH && this._attempts == Game.MAX_ATTEMPTS) {
                 this._mode = Game.COMPLETED;
                     this._onVictory();
             }
