@@ -2,35 +2,35 @@
     "symbols": [
         {
             "src": "01-aztec",
-            "prize": "Playing cards"
+            "prize": "Amusnet Smoothie"
         },
         {
             "src": "02-anubis",
-            "prize": "Playing cards"
+            "prize": "Amusnet Smoothie"
         },
         {
             "src": "03-ankh",
-            "prize": "Car fragrance"
+            "prize": "Glass Bottle"
         },
         {
             "src": "04-bird",
-            "prize": "Amusnet scarf"
+            "prize": "Swiss Knife"
         },
         {
             "src": "05-helmet",
-            "prize": "Wireless mouse"
+            "prize": "Amusnet Smoothie"
         },
         {
             "src": "06-gun",
-            "prize": "Mouse pad"
+            "prize": "Mouse"
         },
         {
             "src": "07-totem",
-            "prize": "Amusnet smoothie"
+            "prize": "USB charging cable"
         },
         {
             "src": "08-dow",
-            "prize": "Mouse pad"
+            "prize": "Amusnet Smoothie"
         },
         {
             "src": "09-mexican",
@@ -38,7 +38,7 @@
         },
         {
             "src": "10-john",
-            "prize": "USB charging cable"
+            "prize": "Amusnet Smoothie"
         }
     ],
     "default": {
