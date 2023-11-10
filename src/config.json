@@ -2,23 +2,23 @@
     "symbols": [
         {
             "src": "01-aztec",
-            "prize": "Amusnet Smoothie"
+            "prize": "Amusnet Beer"
         },
         {
             "src": "02-anubis",
-            "prize": "Amusnet Smoothie"
+            "prize": "Amusnet Beer"
         },
         {
             "src": "03-ankh",
-            "prize": "Glass Bottle"
+            "prize": "Amusnet Beer"
         },
         {
             "src": "04-bird",
-            "prize": "Swiss Knife"
+            "prize": "Amusnet Beer"
         },
         {
             "src": "05-helmet",
-            "prize": "Amusnet Smoothie"
+            "prize": "Amusnet Beer"
         },
         {
             "src": "06-gun",
@@ -26,23 +26,23 @@
         },
         {
             "src": "07-totem",
-            "prize": "USB Charging Cable"
+            "prize": "Amusnet Cards"
         },
         {
             "src": "08-dow",
-            "prize": "Amusnet Smoothie"
+            "prize": "Amusnet Cup"
         },
         {
             "src": "09-mexican",
-            "prize": "Lighter"
+            "prize": "Amusnet Bottle"
         },
         {
             "src": "10-john",
-            "prize": "Amusnet Smoothie"
+            "prize": "Amusnet Lighter"
         }
     ],
     "default": {
         "src": "00-gold",
-        "prize": "Gold coins"
+        "prize": "Gold Coins"
     }
 }
