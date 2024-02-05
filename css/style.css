@@ -127,11 +127,11 @@ a:hover {
     }
 }
 
-@media screen and (min-width: 1340px) and (min-height: 700px) {
+@media screen and (min-width: 1180px) and (min-height: 620px) {
     body {
-        transform: scale(0.75); /* Scale down to 75% of original size */
+        transform: scale(0.6667); /* Scale down to 75% of original size */
         transform-origin: top left; /* Keep the top left corner fixed */
-        width: 133.33%; /* Inverse of the scale factor to avoid horizontal scrolling */
+        width: 150%; /* Inverse of the scale factor to avoid horizontal scrolling */
     }
     
     html {

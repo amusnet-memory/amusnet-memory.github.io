@@ -104,7 +104,7 @@ h1.game-title {
     }
 }
 
-@media screen and (min-width: 1340px) and (min-height: 700px) {
+@media screen and (min-width: 1180px) and (min-height: 620px) {
     #splash {
         height: 100vh;
         display: block;

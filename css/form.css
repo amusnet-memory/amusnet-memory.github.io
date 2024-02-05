@@ -144,7 +144,7 @@ input[type=checkbox]:checked::before {
     margin-bottom: 12px;
 }
 
-@media screen and (min-width: 1340px) and (min-height: 700px) {
+@media screen and (min-width: 1180px) and (min-height: 620px) {
     html {
         background-size: auto !important;
     }
