@@ -1,0 +1,182 @@
+#splash {
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+}
+
+.splash {
+    background-image: url(/assets/splash-small.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+
+    /* width: 100%; */
+    /* height: 0; */
+    /* padding-top: 71.7557252%; */
+    margin-top: 30px;
+
+    flex: 1;
+}
+
+.splash-text {
+    margin-top: 10px;
+    text-align: center;
+}
+
+h1.game-title {
+    margin: 0;
+    padding: 0;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 44px;
+    color: #A6CE39;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.game-subtitle {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 22px;
+    text-transform: uppercase;
+}
+
+.game-desc {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0 auto;
+    width: 330px;
+}
+
+.awards {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.awards * {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 26.4px;
+}
+
+.awards h2 {
+    text-transform: uppercase;
+    color: #A6CE39;
+}
+
+.awards ul {
+    text-decoration: none;
+}
+
+#splash .menu {
+    margin-top: 45px;
+    margin-bottom: 16px;
+    text-align: center;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 16px;
+}
+
+@media screen and (max-height: 790px) and (min-height: 701px) {
+    .splash {
+        margin-top: 16px;
+    }
+}
+
+@media screen and (max-height: 790px) {
+    .awards {
+        margin-top: 20px;
+    }
+
+    #splash .menu {
+        margin-top: 25px;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    #splash .logo {
+        margin-top: 16px;
+    }
+
+    #splash .splash {
+        margin-top: 8px;
+    }
+}
+
+@media screen and (min-width: 1340px) and (min-height: 700px) {
+    #splash {
+        height: 100vh;
+        display: block;
+    }
+
+    .splash {
+        background-image: url(/assets/hd/splash.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        width: 1005px;
+        height: 718px;
+
+        margin: 0;
+
+        position: absolute;
+        top: 248px;
+        left: 44px;
+    }
+
+    .splash-text {
+        position: absolute;
+        top: 180px;
+        left: 950px;
+        width: 920px;
+        margin: 0;
+    }
+
+    .game-subtitle {
+        font-size: 40px;
+        line-height: 44px;
+    }
+
+    h1.game-title {
+        font-size: 96px;
+        line-height: 106px;
+        margin-bottom: 12px;
+    }
+
+    .game-desc {
+        font-size: 24px;
+        line-height: 28.8px;
+        width: 920px;
+    }
+
+    .awards {
+        position: absolute;
+        margin: 0;
+
+        top: 468px;
+        left: 1308.5px;
+
+        z-index: 999;
+    }
+
+    .awards * {
+        font-size: 40px;
+        line-height: 44px;
+
+        z-index: 999;
+    }
+
+    .awards ul {
+        text-decoration: none;
+        list-style: none;
+    }
+
+    #splash .menu {
+        position: absolute;
+        top: 704px;
+        left: 1250px;
+        gap: 28px;
+        margin: 0;
+    }
+}

@@ -1,0 +1,189 @@
+@import url(./splash.css);
+@import url(./form.css);
+@import url(./game.css);
+@import url(./leaderboard.css);
+@import url(./demo.css);
+@import url(./help.css);
+@import url(./effects.css);
+@import url(./terms.css);
+@import url(./settings.css);
+
+* {
+    user-select: none;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-image: url('/assets/noise.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.spacer {
+    flex: 1;
+}
+
+a,
+a:visited,
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.logo {
+    background-image: url(/assets/logo.svg);
+
+    background-size: 393px auto;
+    background-repeat: no-repeat;
+    background-position-x: -76px;
+    background-position-y: -20px;
+
+    margin: auto;
+    margin-top: 40px;
+    width: 241px;
+    height: 38px;
+}
+
+.underscore {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.button {
+    display: block;
+    width: 203px;
+    font-size: 16px;
+    line-height: 19.5px;
+    font-weight: 600;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin: auto;
+    border: none;
+    color: white;
+}
+
+.button.main:disabled {
+    background-color: #313131;
+    color: #858585;
+}
+
+.button.main {
+    background-color: black;
+    border-radius: 100px;
+
+    box-shadow: 0px 0px 39.599998474121094px 0px #FFFFFF80, 0px 0px 79.19999694824219px 0px #FFFFFF80, 0px 0px 277.20001220703125px 0px #A6CE3980, 0px 0px 554.4000244140625px 0px #A6CE39, 0px 0px 950.4000244140625px 0px #A6CE39, 0px 0px 1663.199951171875px 0px #A6CE39;
+}
+
+.button.frame {
+    border-radius: 100px;
+    border: 1px solid white;
+}
+
+.shadow {
+    -webkit-filter:
+        drop-shadow(0px 0px 9.899999618530273px #000000) drop-shadow(0px 0px 19.799999237060547px #000000) drop-shadow(0px 0px 69.30000305175781px #000000) drop-shadow(0px 0px 138.60000610351562px #000000) drop-shadow(0px 0px 237.60000610351562px #000000) drop-shadow(0px 0px 415.79998779296875px #000000);
+    filter:
+        drop-shadow(0px 0px 9.899999618530273px #000000) drop-shadow(0px 0px 19.799999237060547px #000000) drop-shadow(0px 0px 69.30000305175781px #000000) drop-shadow(0px 0px 138.60000610351562px #000000) drop-shadow(0px 0px 237.60000610351562px #000000) drop-shadow(0px 0px 415.79998779296875px #000000);
+}
+
+.glyph {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    margin-left: 8px;
+}
+
+.glyph.back {
+    background-image: url('/assets/back-glyph.svg');
+    width: 17px;
+    height: 16px;
+}
+
+.glyph.close {
+    background-image: url('/assets/close-glyph.svg');
+    width: 16px;
+    height: 16px;
+    line-height: 19.2px;
+}
+
+
+@media screen and (max-height: 790px) {
+    .hero {
+        margin-bottom: 24px;
+    }
+}
+
+@media screen and (min-width: 1340px) and (min-height: 700px) {
+    body {
+        transform: scale(0.75); /* Scale down to 75% of original size */
+        transform-origin: top left; /* Keep the top left corner fixed */
+        width: 133.33%; /* Inverse of the scale factor to avoid horizontal scrolling */
+    }
+    
+    html {
+        background-image: url('/assets/hd/noise.webp');
+        background-size: 1920px 1133.5px;
+        background-position-y: -27px;
+        background-repeat: repeat-y;
+    }
+
+    main {
+        position: relative;
+    }
+
+    .logo {
+        background-image: url(/assets/hd/logo.svg);
+        background-size: 734px auto;
+        background-repeat: no-repeat;
+        background-position-x: -117px;
+
+        width: 500px;
+        height: 78px;
+        margin: 0;
+
+        position: absolute;
+        top: 103px;
+        left: 297px;
+    }
+
+    .button {
+        width: 320px;
+        font-size: 28px;
+        line-height: 34px;
+        padding-top: 23px;
+        padding-bottom: 23px;
+    }
+
+    .button.frame {
+        border: 2px solid white;
+    }
+
+    .glyph {
+        margin-left: 12px;
+    }
+
+    .glyph.back {
+        width: 26px;
+        height: 24.4px;
+    }
+    
+    .glyph.close {
+        width: 26px;
+        height: 26px;
+        line-height: 43.2px;
+    }
+}

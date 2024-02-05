@@ -1,0 +1,210 @@
+#terms {
+    background: linear-gradient(to right, #1a1636, #02352f);
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+}
+
+#terms h1 {
+    font-size: 24px;
+    line-height: 28.8px;
+    font-weight: 700;
+    color: #A6CE39;
+}
+
+.terms {
+    margin: 0 24px;
+
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+}
+
+.terms.header {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.terms-subtitle {
+    font-size: 16px;
+    line-height: 19.2px;
+    font-weight: 700;
+    margin-top: 29px;
+    text-align: center;
+}
+
+.terms.main p {
+    margin-top: 8px;
+    margin-left: 24px;
+}
+
+.terms.main ol {
+    counter-reset: item;
+}
+
+.terms.main li {
+    display: block;
+
+    position: relative;
+}
+
+.terms.main li:before {
+    content: counters(item, ".") ".";
+    counter-increment: item;
+
+    position: absolute;
+    left: 0;
+}
+
+.terms.main ol li span {
+    padding-left: 24px;
+    display: block;
+}
+
+/* Main item */
+.terms.main>ol>li>span,
+.terms.main>ol>li:before {
+    font-weight: 700;
+}
+
+.terms.main>ol {
+    margin-top: 32px;
+    margin-bottom: 24px;
+}
+
+.terms.main>ol>li {
+    margin-top: 24px;
+}
+
+/* Nested items */
+.terms.main>ol>li>ol>li {
+    margin-top: 12px;
+}
+
+.terms.notice {
+    margin-top: 54px;
+    padding-bottom: 32px;
+}
+
+.terms.notice ul {
+    list-style-position: inside;
+}
+
+.terms.notice li {
+    position: relative;
+}
+
+.terms.notice>ul>li {
+    margin-top: 16px;
+}
+
+.terms.notice p {
+    margin-top: 8px;
+}
+
+.terms.notice>ul>li>ul {
+    margin-left: 12px;
+    list-style-type: "- ";
+}
+
+.terms.notice span {
+    display: block;
+    margin-left: 12px;
+    position: relative;
+    top: -18px;
+    margin-bottom: -18px;
+}
+
+#terms .exit-whole {
+    position: fixed;
+    right: 32px;
+    bottom: 16px;
+    padding: 0;
+}
+
+#terms .exit-whole a {
+    padding: 8px 16px;
+    background-color: black;
+    border-radius: 100px;
+}
+
+@media screen and (min-width: 1340px) and (min-height: 700px) {
+    #terms h1 {
+        font-size: 64px;
+        line-height: 76.8px;
+    }
+
+    .terms {
+        margin: 36px 300px;
+
+        font-size: 26px;
+        line-height: 36px;
+    }
+
+    .terms.header {
+        margin-top: 75px;
+    }
+
+    .terms-subtitle {
+        font-size: 36px;
+        line-height: 43.2px;
+        margin: auto;
+        margin-top: 20px;
+        width: 920px;
+    }
+
+    .terms.main p {
+        margin-left: 56px;
+    }
+
+    .terms.main ol li span {
+        padding-left: 56px;
+    }
+
+    /* Main item */
+    .terms.main>ol {
+        margin-top: 56px;
+        margin-bottom: 48px;
+    }
+
+    .terms.main>ol>li {
+        margin-top: 48px;
+    }
+
+    /* Nested items */
+    .terms.main>ol>li>ol>li {
+        margin-top: 24px;
+    }
+
+    .terms.notice {
+        margin-top: 72px;
+    }
+
+    .terms.notice>ul>li {
+        margin-top: 24px;
+    }
+
+    .terms.notice p {
+        margin-top: 16px;
+    }
+
+    .terms.notice>ul>li>ul {
+        margin-left: 24px;
+    }
+
+    .terms.notice span {
+        margin-left: 24px;
+        top: -36px;
+        margin-bottom: -36px;
+    }
+
+    #terms .exit-whole {
+        position: fixed;
+        right: 56px;
+        bottom: 48px;
+    }
+
+    #terms .exit-whole a {
+        padding: 16px 32px;
+    }
+}

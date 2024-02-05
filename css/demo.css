@@ -1,0 +1,125 @@
+#demos {
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+}
+
+#demos .logo {
+    min-height: 38px;
+}
+
+.demos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    column-gap: 8px;
+    row-gap: 35px;
+    margin: 8px auto 0 auto;
+
+    flex: 1;
+
+    max-height: 600px;
+    max-width: 492px;
+
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.demo {
+    width: 100%;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+}
+
+.topper {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.demo-link span {
+    border: 1px solid white;
+    border-radius: 100px;
+    padding: 7px 21px;
+
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14.6px;
+}
+
+#demos .menu {
+    margin-top: 66px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+#demos .glyph {
+    fill: white;
+    filter: brightness(0) invert(100%)
+}
+
+@media screen and (max-height: 790px) {
+    .demos {
+        row-gap: 12px;
+    }
+
+    #demos .menu {
+        margin-top: 24px;
+    }
+
+    .topper {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 1340px) and (min-height: 700px) {
+    #demos {
+        height: 100vh;
+        display: block;
+    }
+
+    #demos .logo {
+        left: 680px;
+    }
+
+    .demos {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 70px;
+        row-gap: 49px;
+
+        position: absolute;
+        top: 280px;
+        left: 382px;
+        right: 382px;
+        margin: 0;
+        padding: 0;
+
+        max-height: unset;
+        max-width: unset;
+
+        z-index: 999;
+    }
+
+    .topper {
+        width: 100%;
+        border-radius: 20px;
+        margin-bottom: 20px;
+    }
+
+    .demo-link span {
+        border: 2px solid white;
+        padding: 10px 30px;
+
+        font-size: 20px;
+        line-height: 24.4px;
+    }
+
+    #demos .menu {
+        position: absolute;
+        top: 931px;
+        left: 800px;
+        margin: 0;
+    }
+}

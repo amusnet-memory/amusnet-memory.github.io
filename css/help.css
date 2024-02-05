@@ -1,0 +1,99 @@
+.how-to {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+
+    position: absolute;
+    top: 141px;
+    bottom: 80px;
+    left: 24px;
+    right: 24px;
+
+    overflow-y: scroll;
+}
+
+.how-to p {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.how-to h2 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-top: 36px;
+    margin-bottom: 8px;
+}
+
+.how-to h3 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.how-to strong {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.how-to ul, .how-to ol {
+    margin-left: 16px;
+}
+
+@media screen and (min-width: 1340px) and (min-height: 700px) {
+    #help {
+        height: 100vh;
+        display: block;
+    }
+
+    #help .logo {
+        left: 680px;
+    }
+
+    .how-to {
+        font-size: 32px;
+        line-height: 48px;
+    
+        position: absolute;
+        top: 270px;
+        bottom: 80px;
+        left: 302px;
+        right: 302px;
+    }
+    
+    .how-to p {
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+    
+    .how-to h2 {
+        font-size: 36px;
+        line-height: 54px;
+        margin-top: 36px;
+        margin-bottom: 8px;
+    }
+    
+    .how-to h3 {
+        font-size: 36px;
+        line-height: 54px;
+    }
+    
+    .how-to strong {
+        font-size: 32px;
+        line-height: 48px;
+    }
+    
+    .how-to ul, .how-to ol {
+        margin-left: 54px;
+    }
+
+    .exit {
+        bottom: auto;
+        right: auto;
+        top: 977px;
+        left: 1751px;
+    }
+}

@@ -1,0 +1,218 @@
+#leaderboard {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+}
+
+.lb-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19.2px;
+    text-align: left;
+}
+
+.leaderboard {
+    margin: 53px 24px 0 24px;
+}
+
+table,
+tr,
+td {
+    border-collapse: collapse;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.5px;
+    font-family: 'Inter', sans-serif;
+}
+
+table {
+    margin-top: 12px;
+    width: 100%;
+}
+
+tr {
+    height: 35px;
+    border-bottom: 1px solid white;
+}
+
+.time {
+    text-align: center;
+}
+
+.rank {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19.4px;
+}
+
+.score {
+    font-weight: 700;
+}
+
+.nav {
+    margin: 21px 24px 0 24px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav a,
+.nav a:visited {
+    display: flex;
+    align-items: center;
+
+    color: #A6CE39;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19.2px;
+}
+
+.shoutout {
+    margin: 8px 24px 24px 24px;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.shoutout-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 24px;
+}
+
+.result {
+    margin: 40px 24px 0 24px;
+}
+
+#score .menu {
+    margin-top: 52px;
+    margin-bottom: 24px;
+    text-align: center;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 16px;
+}
+
+@media screen and (max-height: 810px) {
+    .leaderboard {
+        margin-top: 16px;
+    }
+
+    .shoutout-title {
+        margin-bottom: 12px;
+    }
+
+    .result {
+        margin-top: 20px;
+    }
+
+    #score .menu {
+        margin-top: 26px;
+    }
+}
+
+@media screen and (min-width: 1340px) and (min-height: 700px) {
+    #leaderboard {
+        height: 100vh;
+        display: block;
+    }
+
+    #leaderboard .info, #score .info  {
+        position: absolute;
+        top: 60px;
+        left: 720px;
+        margin: 0;
+        width: auto;
+    }
+
+    #leaderboard .hero {
+        font-size: 72px;
+        line-height: 86.4px;
+        margin: 0;
+    }
+
+    .leaderboard {
+        position: absolute;
+        margin: 0;
+        left: 160px;
+        top: 147px;
+    }
+
+    .lb-title {
+        font-size: 36px;
+        line-height: 43.2px;
+    }
+
+    table,
+    tr,
+    td {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    table {
+        margin-top: 20px;
+        width: 762px;
+    }
+
+    tr {
+        height: 79px;
+        border-bottom: 1px solid white;
+    }
+
+    .rank {
+        font-size: 32px;
+        line-height: 38.7px;
+    }
+
+    .shoutout {
+        position: absolute;
+        top: 482px;
+        left: 999px;
+        margin: 0;
+
+        font-size: 20px;
+        line-height: 30px;
+
+        width: 761px;
+    }
+
+    .shoutout-title {
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 36px;
+    }
+
+
+    .nav {
+        position: absolute;
+        margin: 0;
+        top: 969px;
+        left: 1458px;
+    }
+
+    .nav a,
+    .nav a:visited {
+        font-size: 36px;
+        line-height: 43.2px;
+    }
+
+    /** */
+
+    .result {
+        position: absolute;
+        top: 462px;
+        left: 1000px;
+        margin: 0;
+    }
+
+    #score .menu {
+        position: absolute;
+        top: 811px;
+        left: 1221px;
+        margin: 0;
+        gap: 40px;
+    }
+}

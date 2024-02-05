@@ -1,0 +1,278 @@
+#registration {
+    min-height: 100svh;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.registration {
+    margin-top: 24px;
+}
+
+fieldset {
+    border: none;
+}
+
+#registration h1 {
+    font-size: 32px;
+    line-height: 38.4px;
+    text-align: center;
+    font-weight: 700;
+}
+
+#registration form {
+    margin: 29px 24px 0 24px;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 28px;
+}
+
+fieldset {
+    display: grid;
+    grid-auto-flow: row;
+}
+
+.required {
+    font-size: 12px;
+    line-height: 14.08px;
+    font-weight: 400;
+}
+
+.inputs {
+    gap: 12px;
+}
+
+.inputs label {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 4px;
+}
+
+.label {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+}
+
+.inputs input {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 7px 10px;
+    background-color: transparent;
+    color: white;
+}
+
+.checkboxes {
+    gap: 8px;
+}
+
+.checkboxes label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.checkboxes label span {
+    margin-left: 12px;
+    min-width: 0;
+    flex: 1;
+}
+
+input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: 1px solid #FFFFFF;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    vertical-align: middle;
+}
+
+input[type=checkbox]:checked::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+}
+
+.submit {
+    margin-top: 29px;
+    margin-bottom: 64px;
+}
+
+.exit {
+    position: absolute;
+    bottom: 16px;
+    right: 32px;
+}
+
+.exit a {
+    display: flex;
+    align-items: center;
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    color: #A6CE39 !important;
+}
+
+.message {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    padding-left: 32px;
+}
+
+.message p {
+    margin-bottom: 12px;
+}
+
+@media screen and (min-width: 1340px) and (min-height: 700px) {
+    html {
+        background-size: auto !important;
+    }
+
+    #registration {
+        min-height: 100vh;
+        display: block;
+    }
+
+    #registration .logo {
+        margin: auto;
+        position: static !important;
+        margin-top: 103px;
+    }
+
+    .registration {
+        margin: 73px 156px 0 156px;
+    }
+
+    #registration h1 {
+        font-size: 64px;
+        line-height: 76.8px;
+    }
+
+    #registration form {
+        margin: 0;
+        display: block;
+    }
+
+    fieldset {
+        display: block;
+    }
+
+    .inputs {
+        width: 764px;
+        display: grid;
+        grid-auto-flow: row;
+        gap: 20px;
+
+        float: left;
+    }
+
+    .inputs label {
+        gap: 16px;
+    }
+
+    .label {
+        font-size: 24px;
+        line-height: 20px;
+
+        width: 764px;
+    }
+
+    .inputs input {
+        font-size: 24px;
+        line-height: 24px;
+        border: 2px solid white;
+        border-radius: 20px;
+        padding: 24px 12px;
+    }
+
+    /** */
+
+    .checkboxes {
+        gap: 20px;
+        display: grid;
+        margin-left: 845px;
+        padding-top: 36px;
+    }
+
+    .checkboxes label {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .checkboxes label span {
+        margin-left: 20px;
+    }
+
+    input[type=checkbox] {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        border: 3px solid #FFFFFF;
+    }
+
+    input[type=checkbox]:checked::before {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+    }
+
+    /** */
+
+    #registration .submit {
+        margin: 75px 0 96px 845px;
+    }
+    #registration .submit .button {
+        margin-left: 56px;
+    }
+
+    #registration .exit {
+        position: static;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 56px;
+        padding-bottom: 48px;
+    }
+
+    .exit a {
+        font-size: 36px;
+        line-height: 43.2px;
+    }
+
+    .message {
+        font-size: 16px;
+        line-height: 24px;
+        padding-left: 56px;
+        margin-left: 845px;
+        margin-top: 42px;
+    }
+
+    .message p {
+        margin-bottom: 12px;
+    }
+
+    .required {
+        font-size: 24px;
+        line-height: 28.15px;
+    }
+}

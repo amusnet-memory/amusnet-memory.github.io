@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Amusnet Memory Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work%20Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" sizes="192x192" href="/assets/favicon-32.png" />
+</head>
+
+<body>
+    <main id="game">
+        <section class="info">
+            <p class="hero">Ready?</p>
+            <p class="how-to-short">Match the pairs.</p>
+            <p class="how-to-short">See how fast you can get them all!</p>
+        </section>
+        <section class="game">
+            <div class="game-container">
+                <div class="timer">Time: 0:00</div>
+                <div id="main-grid">
+                    <article class="card">
+                        <div class="content">
+                            <div class="front"><img class="card-symbol" src="/assets/card.svg"></div>
+                            <div class="back" style="display: none;"><img class="card-symbol" src="/assets/card.svg">
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="content">
+                            <div class="front"><img class="card-symbol" src="/assets/card.svg"></div>
+                            <div class="back" style="display: none;"><img class="card-symbol" src="/assets/card.svg">
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="content">
+                            <div class="front"><img class="card-symbol" src="/assets/card.svg"></div>
+                            <div class="back" style="display: none;"><img class="card-symbol" src="/assets/card.svg">
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="content">
+                            <div class="front"><img class="card-symbol" src="/assets/card.svg"></div>
+                            <div class="back" style="display: none;"><img class="card-symbol" src="/assets/card.svg">
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="content">
+                            <div class="front"><img class="card-symbol" src="/assets/card.svg"></div>
+                            <div class="back" style="display: none;"><img class="card-symbol" src="/assets/card.svg">
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="content">
+                            <div class="front"><img class="card-symbol" src="/assets/card.svg"></div>
+                            <div class="back" style="display: none;"><img class="card-symbol" src="/assets/card.svg">
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="content">
+                            <div class="front"><img class="card-symbol" src="/assets/card.svg"></div>
+                            <div class="back" style="display: none;"><img class="card-symbol" src="/assets/card.svg">
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="content">
+                            <div class="front"><img class="card-symbol" src="/assets/card.svg"></div>
+                            <div class="back" style="display: none;"><img class="card-symbol" src="/assets/card.svg">
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="content">
+                            <div class="front"><img class="card-symbol" src="/assets/card.svg"></div>
+                            <div class="back" style="display: none;"><img class="card-symbol" src="/assets/card.svg">
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="content">
+                            <div class="front"><img class="card-symbol" src="/assets/card.svg"></div>
+                            <div class="back" style="display: none;"><img class="card-symbol" src="/assets/card.svg">
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="content">
+                            <div class="front"><img class="card-symbol" src="/assets/card.svg"></div>
+                            <div class="back" style="display: none;"><img class="card-symbol" src="/assets/card.svg">
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="content">
+                            <div class="front"><img class="card-symbol" src="/assets/card.svg"></div>
+                            <div class="back" style="display: none;"><img class="card-symbol" src="/assets/card.svg">
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="leaderboard-text">
+                After finishing, check the <a class="underscore">Leaderboard</a> to see your ranking.
+            </div>
+        </section>
+
+        <section class="exit-whole"><a href="#">Exit<span class="glyph close"></span></a></section>
+    </main>
+
+    <script defer>
+        window.addEventListener('resize', scaleGrid);
+        window.addEventListener('load', scaleGrid);
+        const container = document.querySelector('.game-container');
+        const grid = document.getElementById('main-grid');
+
+        function scaleGrid() {
+            if (document.body.clientWidth > 1720 && document.body.clientHeight > 880) {
+                return;
+            }
+
+            const uiSize = document.body.clientHeight <= 790 ? 295 : 354;
+            const maxWidth = document.body.clientWidth - 48;
+            const maxHeight = document.body.clientHeight - uiSize;
+
+            const cellWidth = Math.floor((maxWidth - 20) / 3);
+            const cellHeight = Math.floor((maxHeight - 30) / 4);
+
+            const size = Math.min(cellWidth, cellHeight);
+
+            grid.style.gridTemplateColumns = `repeat(3, ${size}px)`;
+            grid.style.gridTemplateRows = `repeat(4, ${size}px)`;
+            console.error('set to', size);
+        }
+    </script>
+</body>
+
+</html>

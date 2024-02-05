@@ -1,0 +1,299 @@
+#game {
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+}
+
+.info {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.hero {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    color: #A6CE39;
+    margin-bottom: 45px;
+}
+
+.how-to-short {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.game {
+    margin: auto;
+    margin-top: 42px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: min-content;
+    min-width: 300px;
+    /* min-height: 500px; */
+
+    margin-bottom: 8px;
+
+    flex: 1;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+
+    gap: 20px;
+}
+
+.timer {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19.2px;
+    color: #A6CE39;
+}
+
+.leaderboard-text {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+}
+
+#main-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(4, auto);
+    gap: 10px;
+    margin: auto;
+    justify-content: center;
+    max-width: 540px;
+}
+
+@media screen and (max-height: 790px) {
+
+    .game,
+    .game-container {
+        gap: 10px;
+    }
+
+    .game {
+        margin-top: 24px;
+    }
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    color: white;
+
+    background-color: transparent;
+    perspective: 1000px;
+}
+
+.card .content {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card .front,
+.card .back {
+    border: none;
+    border-radius: 10px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.card .front {
+    background-color: #07162b;
+}
+
+.card .back {
+    background-color: #07162b;
+    color: white;
+    transform: rotateY(180deg);
+    overflow: hidden;
+}
+
+.card-symbol {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.exit-whole {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 32px;
+    padding-bottom: 16px;
+}
+
+.exit-whole a {
+    display: flex;
+    align-items: center;
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    color: #A6CE39 !important;
+
+    margin-left: auto;
+}
+
+@keyframes eliminate {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(2) translateY(-4vh);
+    }
+}
+
+@keyframes match {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    0% {
+        transform: scale(1);
+    }
+}
+
+@keyframes splash {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes unsplash {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+.eliminated {
+    animation-name: eliminate;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.matched {
+    animation-name: match;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+.unslpashed {
+    animation-name: unsplash;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@media screen and (min-width: 1340px) and (min-height: 700px) {
+    #game {
+        height: 100vh;
+        display: block;
+    }
+
+    #game .info {
+        position: absolute;
+        top: 99px;
+        left: 160px;
+        text-align: left;
+        width: 385px;
+        margin: 0;
+    }
+
+    #game .hero {
+        font-size: 72px;
+        line-height: 86.4px;
+        margin-bottom: 34px;
+    }
+
+    .how-to-short {
+        font-size: 32px;
+        line-height: 38.4px;
+    }
+
+    .game {
+        position: absolute;
+        margin: 0;
+    }
+
+    .game-container {
+        position: absolute;
+        top: 95px;
+        left: 700px;
+    }
+
+    .timer {
+        font-size: 32px;
+        line-height: 38.4px;
+        width: 100%;
+    }
+
+    #main-grid {
+        grid-template-columns: repeat(4, 248px);
+        grid-template-rows: repeat(3, 248px);
+        gap: 22px;
+        margin: 0;
+        max-width: 1060px;
+        width: 1060px;
+    }
+
+    .card,
+    .card .front,
+    .card .back {
+        border-radius: 20px;
+    }
+
+    .leaderboard-text {
+        position: absolute;
+        font-size: 24px;
+        line-height: 28.8px;
+        top: 884px;
+        left: 160px;
+        width: 430px;
+    }
+
+    #game .exit-whole {
+        position: absolute;
+        padding: 0;
+
+        bottom: auto;
+        right: auto;
+        top: 977px;
+        left: 1751px;
+    }
+
+    .exit-whole a {
+        font-size: 36px;
+        line-height: 43.2px;
+    }
+}
