@@ -1,36 +1,37 @@
 {
+    "skipSplash": true,
     "symbols": [
         {
             "src": "01-aztec",
-            "prize": "Amusnet Beer"
-        },
-        {
-            "src": "02-anubis",
-            "prize": "Amusnet Beer"
-        },
-        {
-            "src": "03-ankh",
-            "prize": "Amusnet Beer"
-        },
-        {
-            "src": "04-bird",
-            "prize": "Amusnet Beer"
-        },
-        {
-            "src": "05-helmet",
-            "prize": "Amusnet Beer"
-        },
-        {
-            "src": "06-gun",
             "prize": "Amusnet Scarf"
         },
         {
-            "src": "07-totem",
+            "src": "02-anubis",
+            "prize": "Amusnet Scarf"
+        },
+        {
+            "src": "03-ankh",
             "prize": "Amusnet Cards"
         },
         {
+            "src": "04-bird",
+            "prize": "Amusnet Cards"
+        },
+        {
+            "src": "05-helmet",
+            "prize": "Amusnet Cards"
+        },
+        {
+            "src": "06-gun",
+            "prize": "Amusnet Car Fragrance"
+        },
+        {
+            "src": "07-totem",
+            "prize": "Amusnet Car Fragrance"
+        },
+        {
             "src": "08-dow",
-            "prize": "Amusnet Cup"
+            "prize": "Amusnet Bottle"
         },
         {
             "src": "09-mexican",
@@ -38,7 +39,7 @@
         },
         {
             "src": "10-john",
-            "prize": "Amusnet Lighter"
+            "prize": "Amusnet USB Cable"
         }
     ],
     "default": {

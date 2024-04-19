@@ -34,7 +34,12 @@ async function start() {
         }
 
         startBtn.remove();
-        document.body.appendChild(splashScreen);
+
+        if (config.skipSplash) {
+            startGame();
+        } else {
+            document.body.appendChild(splashScreen);
+        }
     }
 
     function startGame() {
